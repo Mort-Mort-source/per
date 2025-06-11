@@ -18,7 +18,7 @@ def handle_peer(conn, addr):
 # Servidor que escucha conexiones entrantes
 def peer_server(port):
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind(('localhost', port))
+    server.bind(('0.0.0.0', port))
     server.listen(5)
     print(f"[SERVIDOR] Nodo escuchando en puerto {port}")
     while True:
